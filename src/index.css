@@ -1,3 +1,60 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  @font-face {
+      font-family: delbar;
+      src: url("./fonts/Digi Delbar3.ttf");
+  }
+  @font-face {
+      font-family: faNum;
+      src: url("./fonts/IRANSansWeb(FaNum)_Medium.ttf");
+  }
+  @font-face {
+      font-family: iranLight;
+      src: url("./fonts/IRANSansWeb(FaNum)_Light.ttf");
+  }
+  @font-face {
+      font-family: vazir;
+      src: url("./fonts/Vazir/Vazir.ttf");
+  }
+
+  body {
+      font-family: vazir;
+      direction: rtl;
+      overflow-x: hidden;
+      background: #1c1c22;
+  }
+
+  input,
+  textArea,
+  select {
+      box-shadow: none !important;
+      outline: none !important;
+  }
+
+  ::-webkit-scrollbar {
+      @apply md:w-1;
+  }
+  ::-webkit-scrollbar-track {
+      @apply bg-inherit rounded-2xl;
+  }
+  ::-webkit-scrollbar-thumb {
+      @apply bg-gray-400 rounded-3xl;
+  }
+
+  .swiper-slide {
+      height: 100% !important;
+  }
+}
+
+@layer utilities{
+  .nav-link,
+  .nav-link svg {
+      @apply cursor-pointer transition-all duration-200;
+  }
+  .btn {
+    @apply rounded-xl text-white p-3 font-bold transition-all duration-200;
+}
+}
