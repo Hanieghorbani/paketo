@@ -3,58 +3,61 @@
 @tailwind utilities;
 
 @layer base {
-  @font-face {
-      font-family: delbar;
-      src: url("./fonts/Digi Delbar3.ttf");
-  }
-  @font-face {
-      font-family: faNum;
-      src: url("./fonts/IRANSansWeb(FaNum)_Medium.ttf");
-  }
-  @font-face {
-      font-family: iranLight;
-      src: url("./fonts/IRANSansWeb(FaNum)_Light.ttf");
-  }
-  @font-face {
-      font-family: vazir;
-      src: url("./fonts/Vazir/Vazir.ttf");
-  }
+    @font-face {
+        font-family: delbar;
+        src: url("./fonts/Digi Delbar3.ttf");
+    }
+    @font-face {
+        font-family: faNum;
+        src: url("./fonts/IRANSansWeb(FaNum)_Medium.ttf");
+    }
+    @font-face {
+        font-family: iranLight;
+        src: url("./fonts/IRANSansWeb(FaNum)_Light.ttf");
+    }
+    @font-face {
+        font-family: vazir;
+        src: url("./fonts/Vazir/Vazir.ttf");
+    }
 
-  body {
-      font-family: vazir;
-      direction: rtl;
-      overflow-x: hidden;
-      background: #1c1c22;
-  }
+    body {
+        font-family: vazir;
+        direction: rtl;
+        overflow-x: hidden;
+        background: linear-gradient(90deg, rgba(26, 26, 26, 1) 0%, rgba(45, 52, 50, 1) 51%, rgba(17, 77, 57, 1) 100%);
+    }
 
-  input,
-  textArea,
-  select {
-      box-shadow: none !important;
-      outline: none !important;
-  }
+    input,
+    textArea,
+    select {
+        box-shadow: none !important;
+        outline: none !important;
+    }
 
-  ::-webkit-scrollbar {
-      @apply md:w-1;
-  }
-  ::-webkit-scrollbar-track {
-      @apply bg-inherit rounded-2xl;
-  }
-  ::-webkit-scrollbar-thumb {
-      @apply bg-gray-400 rounded-3xl;
-  }
+    ::-webkit-scrollbar {
+        @apply md:w-1;
+    }
+    ::-webkit-scrollbar-track {
+        @apply bg-inherit rounded-2xl;
+    }
+    ::-webkit-scrollbar-thumb {
+        @apply bg-gray-400 rounded-3xl;
+    }
 
-  .swiper-slide {
-      height: 100% !important;
-  }
+    .swiper-slide {
+        height: 100% !important;
+    }
 }
 
-@layer utilities{
-  .nav-link,
-  .nav-link svg {
-      @apply cursor-pointer transition-all duration-200;
-  }
-  .btn {
-    @apply rounded-xl text-white p-3 font-bold transition-all duration-200;
-}
+@layer utilities {
+    .nav-link,
+    .nav-link svg {
+        @apply cursor-pointer transition-all duration-200 text-light;
+    }
+    .btn {
+        @apply rounded-xl text-light p-3 font-bold transition-all duration-200;
+    }
+    .clip-path-your {
+        clip-path: polygon(38% 21%, 44% 27%, 45% 35%, 48% 44%, 55% 48%, 66% 49%, 74% 55%, 72% 67%, 60% 76%, 44% 74%, 33% 71%, 26% 57%, 24% 46%, 23% 31%, 28% 27%, 30% 24%);
+    }
 }

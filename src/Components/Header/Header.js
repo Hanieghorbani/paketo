@@ -65,7 +65,7 @@ export default function Header() {
         </ul>
       </div>
       <div>
-        <button className="btn bg-green-600 text-[0.9rem] flex items-center gap-2">
+        <button className="btn bg-primary text-[0.9rem] flex items-center gap-2">
           <LuUser2 className="text-xl"/>
           <span>ورود / عضویت</span>
         </button>

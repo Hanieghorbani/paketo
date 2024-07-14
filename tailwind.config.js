@@ -4,7 +4,18 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: "#30a17b",
+        secondary: "#F2CE5F",
+        minorTX: "#303952",
+        light:'#EEEEEE'
+      },
+      boxShadow: {
+        "border-b-primary": "0 3px 0px 0px white",
+        "border-b-white": "0px 2px 1px 0px white",
+      },
+    },
   },
   plugins: [],
 }
