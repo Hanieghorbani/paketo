@@ -6,14 +6,17 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#30a17b",
-        secondary: "#F2CE5F",
+        primary: "#4F6F52",
+        secondary: "#1A4D2E",
         minorTX: "#303952",
         light:'#EEEEEE'
       },
       boxShadow: {
         "border-b-primary": "0 3px 0px 0px white",
         "border-b-white": "0px 2px 1px 0px white",
+      },
+      backgroundImage: {
+        "img-shape": "url('../public/imgs/Untitled.png')",
       },
     },
   },

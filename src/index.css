@@ -24,7 +24,8 @@
         font-family: vazir;
         direction: rtl;
         overflow-x: hidden;
-        background: linear-gradient(90deg, rgba(26, 26, 26, 1) 0%, rgba(45, 52, 50, 1) 51%, rgba(17, 77, 57, 1) 100%);
+        /* background: linear-gradient(90deg, rgba(26, 26, 26, 1) 0%, rgba(45, 52, 50, 1) 51%, rgba(17, 77, 57, 1) 100%); */
+        background: #F5EFE6;
     }
 
     input,
@@ -57,7 +58,7 @@
     .btn {
         @apply rounded-xl text-light p-3 font-bold transition-all duration-200;
     }
-    .clip-path-your {
+    .clip-path {
         clip-path: polygon(38% 21%, 44% 27%, 45% 35%, 48% 44%, 55% 48%, 66% 49%, 74% 55%, 72% 67%, 60% 76%, 44% 74%, 33% 71%, 26% 57%, 24% 46%, 23% 31%, 28% 27%, 30% 24%);
     }
 }
