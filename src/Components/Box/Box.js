@@ -15,7 +15,7 @@ export default function Box({ title, icon, duration, desc }) {
   }
   return (
     <div
-      className="bg-primary flex flex-col p-10  justify-center   items-center rounded-xl text-white gap-3  transition-all  hover:shadow-border-b-white w-1/3 cursor-pointer" 
+      className="bg-primary flex flex-col p-10  justify-center   items-center rounded-xl text-primaryLight gap-3  transition-all  hover:shadow-border-b-white w-1/3 cursor-pointer" 
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       data-aos="fade-up"
@@ -25,7 +25,7 @@ export default function Box({ title, icon, duration, desc }) {
     >
       <div
         className={`text-5xl p-5  rounded-full ${
-          !isHovered ? "text-light transition-all bg-zinc-700/70" : 'bg-light text-primary'
+          !isHovered ? "text-primaryLight transition-all bg-zinc-700/70" : 'bg-primaryLight text-primary'
 
         }`}
       >

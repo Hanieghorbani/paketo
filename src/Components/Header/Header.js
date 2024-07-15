@@ -37,15 +37,15 @@ export default function Header() {
 
   return (
     <div
-      //   className={`flex justify-between items-center container-primary py-2 px-8 lg:z-[600] sm:z-50 w-full text-white transition-all duration-200
-      // ${
-      //   offset == 0
-      //     ? "bg-inherit fixed top-0"
-      //     : offset > 0 && isFixed
-      //     ? "backdrop-blur-md bg-zinc-900/70 shadow-2xl fixed top-0"
-      //     : "hidden"
-      // }`}
-      className="flex justify-between items-center container-primary py-2 px-8    lg:z-[600] sm:z-50 w-full text-white transition-all duration-200 backdrop-blur-md bg-zinc-700/70 shadow-2xl fixed top-0"
+        className={`flex justify-between items-center container-primary py-2 px-8 lg:z-[600] sm:z-50 w-full  transition-all duration-200
+      ${
+        offset == 0
+          ? " bg-inherit fixed top-0 text-primaryLight"
+          : offset > 0 && isFixed
+          ? "backdrop-blur-md bg-zinc-900/70 shadow-2xl fixed top-0 text-primaryLight"
+          : "hidden"
+      }`}
+      // className="flex justify-between items-center container-primary py-2 px-8    lg:z-[600] sm:z-50 w-full text-white transition-all duration-200 backdrop-blur-md bg-zinc-700/70 shadow-2xl fixed top-0"
     >
       <div className="flex items-center">
         <img src="./imgs/logo.png" alt="logo" className="w-24 cursor-pointer" />
@@ -54,7 +54,7 @@ export default function Header() {
             پک پذیرایی
           </li>
           <li className="nav-link flex items-center gap-1 group relative">
-            انوااع پک های پذیرایی ما
+            انواع پک های پذیرایی ما
           </li>
           <li className="nav-link flex items-center gap-1 group relative">
             مقاله ها

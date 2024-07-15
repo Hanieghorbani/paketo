@@ -5,6 +5,7 @@ import ProductBox from "./Components/ProductBox/ProductBox"
 import { Autoplay, Pagination } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
 import products from "./products/products"
+import AdvertiseBox from "./Components/AdvertiseBox/AdvertiseBox"
 // Import Swiper styles
 import "swiper/css"
 import AOS from "aos"
@@ -12,7 +13,8 @@ import { useEffect } from "react"
 import { FaInfo } from "react-icons/fa6"
 import { IoSearchOutline } from "react-icons/io5"
 import { LiaCartPlusSolid } from "react-icons/lia"
-import { IoIosArrowRoundBack } from "react-icons/io";
+import { IoIosArrowRoundBack } from "react-icons/io"
+
 function App() {
   useEffect(() => {
     AOS.init({})
@@ -39,11 +41,11 @@ function App() {
           <CoverEndOfHeader img="پک-پذیرایی-ترحیم.jpg" />
         </SwiperSlide>
         <SwiperSlide>
-          <CoverEndOfHeader img="سربرگ-پک-پذیرایی-ترحیم.jpg" />
+          <CoverEndOfHeader img="20200624193352_5ef36b5891dfa.jpg" />
         </SwiperSlide>
-        <SwiperSlide>
+        {/* <SwiperSlide>
           <CoverEndOfHeader img="پک-پذیرایی-همایش-2048x758.jpg" />
-        </SwiperSlide>
+        </SwiperSlide> */}
       </Swiper>
       {/* <img
         src="./imgs/cloud-bg.3d269249c45974f564a9.png"
@@ -55,7 +57,8 @@ function App() {
       <div className="">
         {/* type */}
         <div className="mt-24 mx-10">
-          <h1 className="text-secondary text-center font-bold text-2xl">
+          <h1 className="text-secondary text-center font-bold text-2xl flex gap-2 items-center justify-center">
+            <div className="w-4 h-4 bg-secondary rounded-md"></div>
             نوع مراسم را انتخاب کن !
           </h1>
           <div className="flex sm:flex-col md:flex-row justify-between gap-5 sm:my-14 lg:my-12 group">
@@ -85,11 +88,12 @@ function App() {
         <div className="flex gap-2 items-center bg-minorTX my-36 justify-between px-10">
           <div className="w-[40%] space-y-5 py-10">
             <h1
-              className="text-2xl font-bold text-gray-800"
+              className="text-2xl font-bold text-gray-800 flex items-center gap-2"
               data-aos="fade-left"
               data-aos-duration={500}
               data-aos-anchor-placement="top-center"
             >
+              <div className="w-4 h-4 bg-secondary rounded-md"></div>
               سفارش پک آماده در <span className="text-secondary">پَکِتو</span>
             </h1>
             <p
@@ -196,11 +200,14 @@ function App() {
 
         {/*product paks  */}
         <div className="my-32 px-10">
-          <div  className="flex justify-between items-center mb-10">
-            <h1 className="text-2xl text-zinc-800 font-bold">
+          <div className="flex justify-between items-center mb-10">
+            <h1 className="text-2xl text-zinc-800 font-bold flex gap-2 items-center">
+              <div className="w-4 h-4 bg-secondary rounded-md"></div>
               پک های پذیرایی ما
             </h1>
-            <button className="flex items-center gap-1 text-primary">مشاهده تمام محصولات <IoIosArrowRoundBack className="text-2xl"/></button>
+            <button className="flex items-center gap-1 text-primary">
+              مشاهده تمام محصولات <IoIosArrowRoundBack className="text-2xl" />
+            </button>
           </div>
           <Swiper
             breakpoints={{
@@ -213,10 +220,10 @@ function App() {
             pagination={{
               clickable: true,
             }}
-            // autoplay={{
-            //   delay: 2500,
-            //   disableOnInteraction: false,
-            // }}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
             modules={[Pagination, Autoplay]}
             className="mySwiper w-full header-cover"
             loop={true}
@@ -227,14 +234,22 @@ function App() {
                   <img
                     src={`./imgs/products/${product.img}`}
                     alt="product"
-                    className="w-full h-56 bg-[#729762] rounded-b-lg"
+                    className="w-full h-56 bg-primary rounded-b-lg cursor-pointer"
                   />
                   <div className="flex flex-col justify-between p-3 mt-3 space-y-3">
-                    <h5 className="text-lg font-[faNum] text-zinc-800">{product.title}</h5>
+                    <h5 className="text-lg font-[faNum] text-zinc-800 cursor-pointer">
+                      {product.title}
+                    </h5>
                     <div className="flex justify-between items-center">
-                      <span className="font-[faNum] text-primary">
-                        {product.price},000 تومان
-                      </span>
+                      <div className="font-[faNum] text-primary flex items-center gap-2">
+                        {product.price},000
+                        <p className=" relative">
+                          توما
+                          <span className=" absolute -top-[14px] left-[3px]">
+                            ن
+                          </span>
+                        </p>
+                      </div>
                       <button
                         className=" cursor-pointer text-secondary text-bold text-2xl"
                         title="افزودن به سبد خرید"
@@ -246,46 +261,37 @@ function App() {
                 </div>
               </SwiperSlide>
             ))}
-
-            {/* <SwiperSlide>
-              <ProductBox
-                img={"170947726465e48d903cb4d.png"}
-                title={"پک پذیرایی جشن 2"}
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <ProductBox
-                img={"170947783365e48fc918c2f.png"}
-                title={"پک پذیرایی جشن 3"}
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <ProductBox
-                img={"167923000964170439d413a.png"}
-                title={"پک پذیرایی همایش 4"}
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <ProductBox
-                img={"1666615256635687d84dd8e.png"}
-                title={"پک پذیرایی ترحیم 5"}
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <ProductBox
-                img={"166661597663568aa82613a.png"}
-                title={"پک پذیرایی همایش 6"}
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <ProductBox
-                img={"1683720520645b89486c7c2.png"}
-                title={"پک پذیرایی ترحیم 7"}
-              />
-            </SwiperSlide> */}
           </Swiper>
         </div>
         {/*end product paks  */}
+
+        {/* Advertise */}
+        <div className=" relative my-32 px-10 py-20 bg-img-halva">
+          <div className=" absolute top-0 left-0 w-full h-full bg-zinc-800/80"></div>
+          <div className="flex justify-between gap-10 fap-5 z-10 relative">
+            <AdvertiseBox
+              icon="FaRankingStar"
+              title="کیفیت عالی"
+              desc="در پک پذیرایی پکتو از با کیفیت‌ترین محصولات و برندهای بازار استفاده می‌شود. همه میوه‌ها تازه، درجه یک و دستچین هستند."
+            />
+            <AdvertiseBox
+              icon="LuPackageCheck"
+              title="بسته‌بندی بهداشتی"
+              desc="بسته های پذیرایی از جنس مقوای بهداشتی و دوستدار محیط‌ زیست هستند. این جعبه‌ها پس از استفاده قابلیت بازیافت دارند."
+            />
+            <AdvertiseBox
+              icon="SiTicktick"
+              title="برگزاری آبرومندانه"
+              desc="ظاهر زیبا و جذاب پک ها و کیفیت عالی محصولات داخل بسته پذیرایی پکتو جلوه خاص و منحصربه‌فردی به پذیرایی مراسم شما می‌بخشد."
+            />
+            <AdvertiseBox
+              icon="AiOutlineFieldTime"
+              title="صرفه‌جویی در زمان"
+              desc="تهیه بسته های پذیرایی مراسم‌های خودتان را به عهده پکتو بگذارید و زمان ارزشمندتان را صرف سایر امور مهم‌ مراسم نمایید."
+            />
+          </div>
+        </div>
+        {/*end Advertise */}
       </div>
       <div className="w-full h-96">sdf</div>
       {/* end of body  */}

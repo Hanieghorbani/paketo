@@ -53,7 +53,7 @@
 @layer utilities {
     .nav-link,
     .nav-link svg {
-        @apply cursor-pointer transition-all duration-200 text-light;
+        @apply cursor-pointer transition-all duration-200;
     }
     .btn {
         @apply rounded-xl text-light p-3 font-bold transition-all duration-200;
