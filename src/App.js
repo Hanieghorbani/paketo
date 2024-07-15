@@ -1,16 +1,18 @@
 import CoverEndOfHeader from "./Components/CoverEndOfHeader/CoverEndOfHeader"
 import Header from "./Components/Header/Header"
 import Box from "./Components/Box/Box"
-
-import { Autoplay } from "swiper/modules"
+import ProductBox from "./Components/ProductBox/ProductBox"
+import { Autoplay, Pagination } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
-
+import products from "./products/products"
 // Import Swiper styles
 import "swiper/css"
 import AOS from "aos"
 import { useEffect } from "react"
 import { FaInfo } from "react-icons/fa6"
 import { IoSearchOutline } from "react-icons/io5"
+import { LiaCartPlusSolid } from "react-icons/lia"
+import { IoIosArrowRoundBack } from "react-icons/io";
 function App() {
   useEffect(() => {
     AOS.init({})
@@ -26,7 +28,7 @@ function App() {
           disableOnInteraction: false,
         }}
         modules={[Autoplay]}
-        className="mySwiper header-cover bg-black"
+        className="mySwiper w-full header-cover bg-black"
         loop={true}
       >
         <SwiperSlide>
@@ -87,7 +89,6 @@ function App() {
               data-aos="fade-left"
               data-aos-duration={500}
               data-aos-anchor-placement="top-center"
-              data-aos-delay="100"
             >
               سفارش پک آماده در <span className="text-secondary">پَکِتو</span>
             </h1>
@@ -96,7 +97,6 @@ function App() {
               data-aos="fade-left"
               data-aos-duration={700}
               data-aos-anchor-placement="top-center"
-              data-aos-delay="100"
             >
               شما می­توانید پس از انتخاب هر یک از انواع مراسم بالا، پک پذیرایی
               مورد نظر خود را انتخاب کنید و در آخر تعداد پک های پذیرایی مورد نظر
@@ -131,7 +131,6 @@ function App() {
               data-aos="fade-right"
               data-aos-duration={700}
               data-aos-anchor-placement="top-center"
-              data-aos-delay="100"
             >
               <img
                 src="./imgs/پک-پذیرایی-مقوایی-مشکی-min.jpg"
@@ -194,8 +193,101 @@ function App() {
           </div>
         </div>
         {/*end Counseling */}
+
+        {/*product paks  */}
+        <div className="my-32 px-10">
+          <div  className="flex justify-between items-center mb-10">
+            <h1 className="text-2xl text-zinc-800 font-bold">
+              پک های پذیرایی ما
+            </h1>
+            <button className="flex items-center gap-1 text-primary">مشاهده تمام محصولات <IoIosArrowRoundBack className="text-2xl"/></button>
+          </div>
+          <Swiper
+            breakpoints={{
+              300: { slidesPerView: 1 },
+              400: { slidesPerView: 2 },
+              768: { slidesPerView: 3 },
+              976: { slidesPerView: 4 },
+            }}
+            spaceBetween={30}
+            pagination={{
+              clickable: true,
+            }}
+            // autoplay={{
+            //   delay: 2500,
+            //   disableOnInteraction: false,
+            // }}
+            modules={[Pagination, Autoplay]}
+            className="mySwiper w-full header-cover"
+            loop={true}
+          >
+            {products.map((product) => (
+              <SwiperSlide>
+                <div className="bg-minorTX rounded-xl overflow-hidden">
+                  <img
+                    src={`./imgs/products/${product.img}`}
+                    alt="product"
+                    className="w-full h-56 bg-[#729762] rounded-b-lg"
+                  />
+                  <div className="flex flex-col justify-between p-3 mt-3 space-y-3">
+                    <h5 className="text-lg font-[faNum] text-zinc-800">{product.title}</h5>
+                    <div className="flex justify-between items-center">
+                      <span className="font-[faNum] text-primary">
+                        {product.price},000 تومان
+                      </span>
+                      <button
+                        className=" cursor-pointer text-secondary text-bold text-2xl"
+                        title="افزودن به سبد خرید"
+                      >
+                        <LiaCartPlusSolid />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))}
+
+            {/* <SwiperSlide>
+              <ProductBox
+                img={"170947726465e48d903cb4d.png"}
+                title={"پک پذیرایی جشن 2"}
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <ProductBox
+                img={"170947783365e48fc918c2f.png"}
+                title={"پک پذیرایی جشن 3"}
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <ProductBox
+                img={"167923000964170439d413a.png"}
+                title={"پک پذیرایی همایش 4"}
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <ProductBox
+                img={"1666615256635687d84dd8e.png"}
+                title={"پک پذیرایی ترحیم 5"}
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <ProductBox
+                img={"166661597663568aa82613a.png"}
+                title={"پک پذیرایی همایش 6"}
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <ProductBox
+                img={"1683720520645b89486c7c2.png"}
+                title={"پک پذیرایی ترحیم 7"}
+              />
+            </SwiperSlide> */}
+          </Swiper>
+        </div>
+        {/*end product paks  */}
       </div>
-            <div className="w-full h-96">sdf</div>
+      <div className="w-full h-96">sdf</div>
       {/* end of body  */}
     </div>
   )
