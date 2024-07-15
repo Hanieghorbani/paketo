@@ -8,7 +8,7 @@ module.exports = {
       colors: {
         primary: "#4F6F52",
         secondary: "#1A4D2E",
-        minorTX: "#303952",
+        minorTX: "#E8DFCA",
         light:'#EEEEEE'
       },
       boxShadow: {

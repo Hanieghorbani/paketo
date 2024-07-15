@@ -79,8 +79,8 @@ function App() {
         </div>
         {/* end type  */}
 
-        {/* more info  */}
-        <div className="flex gap-2 items-center bg-[#E8DFCA] my-36 justify-between px-10">
+        {/* first info  */}
+        <div className="flex gap-2 items-center bg-minorTX my-36 justify-between px-10">
           <div className="w-[40%] space-y-5 py-10">
             <h1
               className="text-2xl font-bold text-gray-800"
@@ -105,7 +105,13 @@ function App() {
               به بعد تنها منتظر تحویل پک پذیرایی سفارشی خود در آدرس و زمانی که
               تعیین کرده‌اید باشید. به همین راحتی پَکِتو تحویل بگیر!
             </p>
-            <div className="flex gap-4">
+            <div
+              className="flex gap-4"
+              // data-aos="fade-left"
+              // data-aos-duration={1300}
+              // data-aos-anchor-placement="top-center"
+              // data-aos-delay="0"
+            >
               <button className="btn bg-primary flex gap-1 items-center">
                 انتخاب پک <IoSearchOutline />
               </button>
@@ -156,9 +162,40 @@ function App() {
             </div>
           </div>
         </div>
-        {/* end more info  */}
-      </div>
+        {/* end first info  */}
 
+        {/* Counseling */}
+        <div className="my-32 px-10 flex items-center justify-between">
+          <h1
+            className="text-2xl font-bold text-gray-800"
+            data-aos="flip-right"
+            data-aos-duration={700}
+            data-aos-anchor-placement="top-center"
+          >
+            برای راهنمایی سفارش پک، مشاوره رایگان دریافت کنید !
+          </h1>
+          <div
+            className="flex flex-col gap-3 w-[45%]"
+            data-aos="flip-left"
+            data-aos-duration={700}
+            data-aos-anchor-placement="top-center"
+          >
+            <input
+              type="text"
+              className="bg-minorTX rounded-xl p-3 placeholder:text-secondary"
+              placeholder="نام شما"
+            />
+            <input
+              type="text"
+              className="bg-minorTX rounded-xl p-3 placeholder:text-secondary"
+              placeholder="تلفن شما"
+            />
+            <button className="btn bg-primary">رزرو مشاوره</button>
+          </div>
+        </div>
+        {/*end Counseling */}
+      </div>
+            <div className="w-full h-96">sdf</div>
       {/* end of body  */}
     </div>
   )
