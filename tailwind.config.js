@@ -9,6 +9,7 @@ module.exports = {
         primary: "#4F6F52",
         secondary: "#1A4D2E",
         minorTX: "#E8DFCA",
+        // minorTX: "#faf3e2",
         light:'#EEEEEE',
         primaryLight:'#F5EFE6',
       },
@@ -19,6 +20,7 @@ module.exports = {
       backgroundImage: {
         "img-shape": "url('../public/imgs/Untitled.png')",
         "img-halva": "url('../public/imgs/پک-پذیرایی-همایش-2048x758.jpg')",
+        "img-side": "url('../public/imgs/Untitled2.png')",
       },
     },
   },

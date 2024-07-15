@@ -4,7 +4,8 @@ import Box from "./Components/Box/Box"
 import ProductBox from "./Components/ProductBox/ProductBox"
 import { Autoplay, Pagination } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
-import products from "./products/products"
+import products from "./datas/products"
+import articles from "./datas/articles"
 import AdvertiseBox from "./Components/AdvertiseBox/AdvertiseBox"
 // Import Swiper styles
 import "swiper/css"
@@ -14,7 +15,8 @@ import { FaInfo } from "react-icons/fa6"
 import { IoSearchOutline } from "react-icons/io5"
 import { LiaCartPlusSolid } from "react-icons/lia"
 import { IoIosArrowRoundBack } from "react-icons/io"
-
+import { BsEnvelopeAt } from "react-icons/bs"
+import { FaPhone } from "react-icons/fa"
 function App() {
   useEffect(() => {
     AOS.init({})
@@ -199,7 +201,8 @@ function App() {
         {/*end Counseling */}
 
         {/*product paks  */}
-        <div className="my-32 px-10">
+        <div className="my-32 px-10 relative">
+          {/* <img src="./imgs/Untitled5.png" className=" absolute -left-[389px] -top-[254px]"></img> */}
           <div className="flex justify-between items-center mb-10">
             <h1 className="text-2xl text-zinc-800 font-bold flex gap-2 items-center">
               <div className="w-4 h-4 bg-secondary rounded-md"></div>
@@ -230,18 +233,16 @@ function App() {
           >
             {products.map((product) => (
               <SwiperSlide>
-                <div className="bg-minorTX rounded-xl overflow-hidden">
+                <div className="bg-minorTX rounded-xl overflow-hidden shadow-md shadow-zinc-400/80 mb-10">
                   <img
                     src={`./imgs/products/${product.img}`}
                     alt="product"
-                    className="w-full h-56 bg-primary rounded-b-lg cursor-pointer"
+                    className="w-full h-56 bg-primary cursor-pointer"
                   />
                   <div className="flex flex-col justify-between p-3 mt-3 space-y-3">
-                    <h5 className="text-lg font-[faNum] text-zinc-800 cursor-pointer">
-                      {product.title}
-                    </h5>
-                    <div className="flex justify-between items-center">
-                      <div className="font-[faNum] text-primary flex items-center gap-2">
+                    <h5 className=" font-[faNum] text-zinc-800  flex justify-between">
+                      <p className="text-md cursor-pointer">{product.title}</p>
+                      <div className=" text-primary flex items-center gap-2">
                         {product.price},000
                         <p className=" relative">
                           توما
@@ -250,6 +251,11 @@ function App() {
                           </span>
                         </p>
                       </div>
+                    </h5>
+                    <div className="flex justify-between items-center border-t border-primary pt-3">
+                      <button className="btn bg-primary text-sm">
+                        اطلاعات بیشتر
+                      </button>
                       <button
                         className=" cursor-pointer text-secondary text-bold text-2xl"
                         title="افزودن به سبد خرید"
@@ -268,7 +274,7 @@ function App() {
         {/* Advertise */}
         <div className=" relative my-32 px-10 py-20 bg-img-halva">
           <div className=" absolute top-0 left-0 w-full h-full bg-zinc-800/80"></div>
-          <div className="flex justify-between gap-10 fap-5 z-10 relative">
+          <div className="flex sm:flex-col lg:flex-row justify-between gap-10 fap-5 z-10 relative">
             <AdvertiseBox
               icon="FaRankingStar"
               title="کیفیت عالی"
@@ -292,8 +298,110 @@ function App() {
           </div>
         </div>
         {/*end Advertise */}
+
+        {/* articles */}
+        <div className="my-32 px-10 relative">
+          <img
+            src="./imgs/Untitled2.png"
+            className=" absolute -right-[400px] -top-[206px]"
+          ></img>
+          <div className="my-32 px-10">
+            <div className="flex justify-between items-center mb-10 z-10">
+              <h1 className="text-2xl text-light relative font-bold flex gap-2 items-center">
+                <div className="w-4 h-4 bg-secondary rounded-md"></div>
+                آخرین مطالب
+              </h1>
+              <button className="flex items-center gap-1 text-primary">
+                مشاهده تمام مطالب <IoIosArrowRoundBack className="text-2xl" />
+              </button>
+            </div>
+            <Swiper
+              breakpoints={{
+                300: { slidesPerView: 1 },
+                400: { slidesPerView: 2 },
+                768: { slidesPerView: 3 },
+                976: { slidesPerView: 4 },
+              }}
+              spaceBetween={30}
+              pagination={{
+                clickable: true,
+              }}
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+              }}
+              modules={[Pagination, Autoplay]}
+              className="mySwiper w-full header-cover"
+              loop={true}
+            >
+              {articles.map((article) => (
+                <SwiperSlide>
+                  <div className=" bg-minorTX  rounded-xl overflow-hidden">
+                    <img
+                      src={article.img}
+                      alt="article"
+                      className="w-full h-56 rounded-b-lg cursor-pointer"
+                    />
+                    <div className="flex flex-col justify-between p-3 mt-3 space-y-3">
+                      <h5 className="text-lg font-[faNum] text-zinc-800 cursor-pointer">
+                        {article.title}
+                      </h5>
+                      <p className=" leading-7 text-sm">{article.desc}</p>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+        </div>
+        {/*end articles */}
+
+        {/* footer */}
+        <div className="px-10 py-10 bg-primary z-10 relative grid grid-cols-2 gap-10">
+          <div className=" space-y-5">
+            <img src="./imgs/logo.png" alt="logo" />
+            <p className=" leading-8 text-primaryLight">
+              پکتو سامانه سفارش و خرید اینترنتی پک پذیرایی تک‌نفره برای سمینار،
+              همایش‌، مجلس ختم و ترحیم، جلسه دفاع پایان نامه، تور گردشگری،
+              مهمانی و سایر مراسم­‌ها است. وظیفه پکتو تهیه و ارسال بسته های
+              پذیرایی با بهترین کیفیت و مناسب‌ترین قیمت در کمترین زمان ممکن و
+              کمک به برگزاری هرچه آبرومندانه تر مراسم‌های شما است. همچنین مدیران
+              محترم مدارس می‌توانند جهت سفارش هفتگی میان وعده سلامت دانش‌­آموزان
+              از طریق مراجعه به صفحه ویژه مدارس در سایت پَکِتو اقدام نمایند.
+            </p>
+            <div className="text-primaryLight space-y-3">
+              <p className="flex gap-2 items-center cursor-pointer hover:text-minorTX">
+                <BsEnvelopeAt />
+                hnie.ghorbani@gmail.com
+              </p>
+              <p className="flex gap-2 items-center cursor-pointer hover:text-minorTX">
+                <FaPhone />
+                02177300012
+              </p>
+            </div>
+            <div className="flex gap-5 items-center">
+              <img src="./imgs/logo-anjoman.cf66575.png" alt="" />
+              <img src="./imgs/logo-ecunion.7f2795e.png" alt="" />
+              <img src="./imgs/enamad.png" alt="" />
+            </div>
+          </div>
+          <div>
+            <div>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d146802.45382332455!2d51.476734371174224!3d35.718273801456405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfa!2sus!4v1702482129299!5m2!1sfa!2sus"
+                className="w-full rounded-xl"
+                height="450"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+        {/*end footer */}
+        <div className="bg-zinc-800 px-10 py-1 text-center text-primaryLight">تمام حقوق برای پَکِتو محفوظ است</div>
       </div>
-      <div className="w-full h-96">sdf</div>
+      {/* <div className="w-full h-96">sdf</div> */}
       {/* end of body  */}
     </div>
   )
