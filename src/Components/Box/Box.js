@@ -15,7 +15,7 @@ export default function Box({ title, icon, duration, desc }) {
   }
   return (
     <div
-      className="bg-primary flex flex-col p-10  justify-center   items-center rounded-xl text-primaryLight gap-3  transition-all  hover:shadow-border-b-white w-1/3 cursor-pointer" 
+      className="bg-primary flex flex-col p-10  justify-center   items-center rounded-xl text-primaryLight gap-3  transition-all  hover:shadow-border-b-white cursor-pointer" 
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       data-aos="fade-up"

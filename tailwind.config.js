@@ -23,6 +23,14 @@ module.exports = {
         "img-side": "url('../public/imgs/Untitled2.png')",
       },
     },
+    screens: {
+      sm: "350px",
+      smMd:'500px',
+      md: "768px",
+      mdLg:'850px',
+      lg: "976px",
+      xl: "1200px",
+    },
   },
   plugins: [],
 }
