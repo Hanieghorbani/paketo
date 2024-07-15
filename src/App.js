@@ -201,9 +201,9 @@ function App() {
         {/*end Counseling */}
 
         {/*product paks  */}
-        <div className="my-32 px-10 relative">
+        <div className="mt-32  relative">
           {/* <img src="./imgs/Untitled5.png" className=" absolute -left-[389px] -top-[254px]"></img> */}
-          <div className="flex justify-between items-center mb-10">
+          <div className="flex justify-between items-center mb-10 px-10">
             <h1 className="text-2xl text-zinc-800 font-bold flex gap-2 items-center">
               <div className="w-4 h-4 bg-secondary rounded-md"></div>
               پک های پذیرایی ما
@@ -212,67 +212,71 @@ function App() {
               مشاهده تمام محصولات <IoIosArrowRoundBack className="text-2xl" />
             </button>
           </div>
-          <Swiper
-            breakpoints={{
-              300: { slidesPerView: 1 },
-              400: { slidesPerView: 2 },
-              768: { slidesPerView: 3 },
-              976: { slidesPerView: 4 },
-            }}
-            spaceBetween={30}
-            pagination={{
-              clickable: true,
-            }}
-            autoplay={{
-              delay: 2500,
-              disableOnInteraction: false,
-            }}
-            modules={[Pagination, Autoplay]}
-            className="mySwiper w-full header-cover"
-            loop={true}
-          >
-            {products.map((product) => (
-              <SwiperSlide>
-                <div className="bg-minorTX rounded-xl overflow-hidden shadow-md shadow-zinc-400/80 mb-10">
-                  <img
-                    src={`./imgs/products/${product.img}`}
-                    alt="product"
-                    className="w-full h-56 bg-primary cursor-pointer"
-                  />
-                  <div className="flex flex-col justify-between p-3 mt-3 space-y-3">
-                    <h5 className=" font-[faNum] text-zinc-800  flex justify-between">
-                      <p className="text-md cursor-pointer">{product.title}</p>
-                      <div className=" text-primary flex items-center gap-2">
-                        {product.price},000
-                        <p className=" relative">
-                          توما
-                          <span className=" absolute -top-[14px] left-[3px]">
-                            ن
-                          </span>
+          <div className="bg-primary p-10">
+            <Swiper
+              breakpoints={{
+                300: { slidesPerView: 1 },
+                400: { slidesPerView: 2 },
+                768: { slidesPerView: 3 },
+                976: { slidesPerView: 4 },
+              }}
+              spaceBetween={30}
+              pagination={{
+                clickable: true,
+              }}
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+              }}
+              modules={[Pagination, Autoplay]}
+              className=" w-full "
+              loop={true}
+            >
+              {products.map((product) => (
+                <SwiperSlide>
+                  <div className="bg-primaryLight rounded-xl overflow-hidden shadow-md shadow-zinc-400/80 mb-10">
+                    <img
+                      src={`./imgs/products/${product.img}`}
+                      alt="product"
+                      className="w-full h-56 bg-primaryLight cursor-pointer"
+                    />
+                    <div className="flex flex-col justify-between p-3 mt-3 space-y-3">
+                      <h5 className=" font-[faNum] text-zinc-800  flex justify-between">
+                        <p className="text-md cursor-pointer">
+                          {product.title}
                         </p>
+                        <div className=" text-primary flex items-center gap-2">
+                          {product.price},000
+                          <p className=" relative">
+                            توما
+                            <span className=" absolute -top-[14px] left-[3px]">
+                              ن
+                            </span>
+                          </p>
+                        </div>
+                      </h5>
+                      <div className="flex justify-between items-center border-t border-primary pt-3">
+                        <button className="btn bg-primary text-sm">
+                          اطلاعات بیشتر
+                        </button>
+                        <button
+                          className=" cursor-pointer text-secondary text-bold text-2xl"
+                          title="افزودن به سبد خرید"
+                        >
+                          <LiaCartPlusSolid />
+                        </button>
                       </div>
-                    </h5>
-                    <div className="flex justify-between items-center border-t border-primary pt-3">
-                      <button className="btn bg-primary text-sm">
-                        اطلاعات بیشتر
-                      </button>
-                      <button
-                        className=" cursor-pointer text-secondary text-bold text-2xl"
-                        title="افزودن به سبد خرید"
-                      >
-                        <LiaCartPlusSolid />
-                      </button>
                     </div>
                   </div>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
         </div>
         {/*end product paks  */}
 
         {/* Advertise */}
-        <div className=" relative my-32 px-10 py-20 bg-img-halva">
+        <div className=" relative mb-32 px-10 py-20 bg-img-halva">
           <div className=" absolute top-0 left-0 w-full h-full bg-zinc-800/80"></div>
           <div className="flex sm:flex-col lg:flex-row justify-between gap-10 fap-5 z-10 relative">
             <AdvertiseBox
@@ -357,7 +361,7 @@ function App() {
         {/*end articles */}
 
         {/* footer */}
-        <div className="px-10 py-10 bg-primary z-10 relative grid grid-cols-2 gap-10">
+        <div className="px-10 py-10 bg-primary z-10 relative grid sm:grid-cols-1 lg:grid-cols-2 gap-10">
           <div className=" space-y-5">
             <img src="./imgs/logo.png" alt="logo" />
             <p className=" leading-8 text-primaryLight">
@@ -399,7 +403,9 @@ function App() {
           </div>
         </div>
         {/*end footer */}
-        <div className="bg-zinc-800 px-10 py-1 text-center text-primaryLight">تمام حقوق برای پَکِتو محفوظ است</div>
+        <div className="bg-zinc-800 px-10 py-1 text-center text-primaryLight">
+          تمام حقوق برای پَکِتو محفوظ است
+        </div>
       </div>
       {/* <div className="w-full h-96">sdf</div> */}
       {/* end of body  */}

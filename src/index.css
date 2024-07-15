@@ -45,9 +45,12 @@
         @apply bg-gray-400 rounded-3xl;
     }
 
-    .swiper-slide {
+    /* .swiper-slide {
         height: 100% !important;
-    }
+    } */
+    /* .swiper-initialized {
+        @apply p-10 rounded-xl  !important;
+    } */
 }
 
 @layer utilities {
@@ -61,4 +64,5 @@
     .clip-path {
         clip-path: polygon(38% 21%, 44% 27%, 45% 35%, 48% 44%, 55% 48%, 66% 49%, 74% 55%, 72% 67%, 60% 76%, 44% 74%, 33% 71%, 26% 57%, 24% 46%, 23% 31%, 28% 27%, 30% 24%);
     }
+    
 }
