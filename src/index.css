@@ -46,7 +46,7 @@
         @apply bg-inherit rounded-2xl;
     }
     ::-webkit-scrollbar-thumb {
-        @apply bg-gray-400 rounded-3xl;
+        @apply bg-secondary rounded-3xl;
     }
 
     /* .swiper-slide {
@@ -74,7 +74,7 @@
 @layer utilities {
     .nav-link,
     .nav-link svg {
-        @apply cursor-pointer transition-all duration-200;
+        @apply cursor-pointer transition-all duration-200 hover:text-minorTX duration-300 transition-all;
     }
     .btn {
         @apply rounded-xl text-light p-3 font-bold transition-all duration-200 hover:bg-secondary;
