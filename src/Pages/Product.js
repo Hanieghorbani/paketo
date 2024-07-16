@@ -62,10 +62,10 @@ export default function Product() {
   return (
     <div>
       <Header is={true} />
-      <div className="bg-primary rounded-[3rem] mt-32 mx-10 text-primaryLight p-5">
+      <div className="bg-primary rounded-[3rem] mt-32 sm:mx-3 md:mx-10 text-primaryLight sm:px-3 md:px-5 py-3">
         <Link to="/">خانه</Link> / محصول / {title}
       </div>
-      <div className=" bg-minorTX rounded-[2rem] grid sm:grid-cols-1 lg:grid-cols-2 m-10 relative overflow-hidden">
+      <div className=" bg-minorTX rounded-[2rem] grid sm:grid-cols-1 lg:grid-cols-2 sm:m-3 md:m-10 relative overflow-hidden p-5">
         <img
           src="/imgs/Untitled.png"
           alt=""
@@ -73,19 +73,19 @@ export default function Product() {
         />
         <img
           src={`/imgs/products/${productInfos.img}`}
-          className="z-10 max-h-96"
+          className="z-10 max-h-96 justify-self-center"
           data-aos="zoom-in"
           data-aos-duration={700}
           data-aos-anchor-placement="top-center"
         />
         {/* main infos  */}
         <div
-          className="flex flex-col items-start mt-10 gap-5 z-10 pl-10"
+          className="flex flex-col items-start mt-10 gap-5 z-10 md:pl-10"
           data-aos="fade-right"
           data-aos-duration={700}
           data-aos-anchor-placement="top-center"
         >
-          <h5 className="font-[faNum] text-3xl text-zinc-700">
+          <h5 className="font-[faNum] sm:text-2xl md:text-3xl text-zinc-700">
             {productInfos.title}
           </h5>
 
@@ -93,7 +93,7 @@ export default function Product() {
             این بسته شامل: آب پرتقال طبیعی، شربت زعفران، چندتکه نان، توت فرنگی
             ،ساندویچ سالاد مرغ
           </p>
-          <div className="flex justify-between w-full gap-2 text-zinc-800 font-[faNum] pl-2">
+          <div className="flex sm:flex-col md:flex-row justify-between w-full gap-2 text-zinc-800 font-[faNum]">
             <p className="flex items-center gap-2">
               <span className="w-2 h-2 bg-secondary rounded-md"></span>
               میوه‌ها مرغوب و شستشو شده هستند.
@@ -118,7 +118,7 @@ export default function Product() {
           </div>
           <div className="flex items-center gap-3">
             {/* counter  */}
-            <div className="bg-secondary flex justify-between text-xl items-center text-primaryLight gap-1 w-24 p-3 rounded-2xl">
+            <div className="bg-secondary flex justify-between text-xl items-center text-primaryLight gap-1 w-24 p-[11px] rounded-xl">
               <FaCircleMinus
                 className="hover:bg-primary rounded-full cursor-pointer"
                 onClick={() => {
@@ -127,7 +127,7 @@ export default function Product() {
                   }
                 }}
               />
-              <p className="text-dark font-[faNum] sm:text-2xl md:text-base">
+              <p className="text-dark font-[faNum] sm:text-sm md:text-lg">
                 {mainCount}
               </p>
 
@@ -140,7 +140,7 @@ export default function Product() {
             </div>
             {/* end counter  */}
 
-            <button className="btn bg-secondary flex items-center gap-2 text-sm">
+            <button className="btn bg-secondary flex items-center gap-2 sm:text-sm md:text-md">
               <LiaCartPlusSolid className="text-2xl " />
               افزودن به سبد خرید
             </button>
@@ -153,7 +153,7 @@ export default function Product() {
 sdfsfd
       </div> */}
       {/* descs and comments  */}
-      <div className="bg-minorTX m-10 rounded-[2rem] overflow-hidden">
+      <div className="bg-minorTX sm:m-3 md:m-10 rounded-[2rem] overflow-hidden">
         <div className="bg-primary text-primaryLight py-5 flex items-center justify-center gap-10 text-lg">
           <h5
             className={` border-primaryLight pb-2 hover:border-b-2 cursor-pointer ${
@@ -172,12 +172,12 @@ sdfsfd
             نظرات (<span className="font-[faNum]">3</span>)
           </h5>
         </div>
-        <div className="p-10 pt-0">
+        <div className="sm:p-3 md:p-10 pt-0">
           {showCommOrDesc == "desc" ? (
             <div className="flex sm:flex-col md:flex-row gap-5 py-5">
               <div className=" space-y-3 sm:w-full md:w-1/2">
                 <h2 className="text-xl font-bold text-zinc-800 flex gap-2 items-center">
-                  <div className="w-4 h-4 bg-secondary rounded-md"></div>
+                  <div className="sm:w-2 md:w-4 sm:h-2 md:h-4 bg-secondary sm:rounded-sm md:rounded-md"></div>
                   درباره محصول
                 </h2>
                 <p className="leading-8 text-justify text-zinc-800 text-sm">
@@ -190,14 +190,14 @@ sdfsfd
                 </p>
 
                 <h2 className="text-xl font-bold text-zinc-800 flex gap-2 items-center">
-                  <div className="w-4 h-4 bg-secondary rounded-md"></div>
+                  <div className="sm:w-2 md:w-4 sm:h-2 md:h-4 bg-secondary sm:rounded-sm md:rounded-md"></div>
                   مشاوره و راهنمایی
                 </h2>
                 <p className=" leading-8 text-justify text-zinc-800 text-sm">
                   لطفا جهت راهنمایی ثبت سفارش و اطلاع از سفارشی سازی این محصول
                   با شماره زیر تماس بگیرید:{" "}
                 </p>
-                <span className="text-2xl font-[faNum] flex items-center gap-2 justify-center text-zinc-800 cursor-pointer hover:text-secondary">
+                <span className="sm:text-xl md:text-2xl font-[faNum] flex items-center gap-2 justify-center text-zinc-800 cursor-pointer hover:text-secondary">
                   <FaPhone />
                   02177300012
                 </span>

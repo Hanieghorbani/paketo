@@ -1,36 +1,10 @@
-import React, { useContext, useEffect, useState } from "react"
+import React, { useState } from "react"
 import useScroll from "../../hooks/useScroll"
 import { Link } from "react-router-dom"
 import Sidebar from "../Sidebar/Sidebar"
 // icons
 import { LuUser2 } from "react-icons/lu"
-import {
-  IoChevronDownOutline,
-  IoSettings,
-  IoLogOutOutline,
-} from "react-icons/io5"
-import {
-  CiSearch,
-  CiUser,
-  CiSettings,
-  CiCreditCard1,
-  CiBookmark,
-} from "react-icons/ci"
-import { FaBars } from "react-icons/fa6"
-import {
-  FaHome,
-  FaPhoneAlt,
-  FaSearch,
-  FaUserCircle,
-  FaUser,
-  FaCreditCard,
-} from "react-icons/fa"
 import { HiOutlineBars3BottomLeft } from "react-icons/hi2"
-import { GiFilmSpool } from "react-icons/gi"
-import { MdArticle } from "react-icons/md"
-import { FiLogIn } from "react-icons/fi"
-import { IoMdClose } from "react-icons/io"
-import { FiShoppingCart } from "react-icons/fi"
 import { Dialog } from "@headlessui/react"
 
 // import axios from "axios"
@@ -62,9 +36,9 @@ export default function Header({ is }) {
             />
           </Link>
           <ul className="gap-5 -mb-2 mr-3 sm:hidden md:flex">
-            <li className="nav-link flex items-center gap-1 group relative">
-              پک پذیرایی
-            </li>
+            <Link to={'/'} className="nav-link flex items-center gap-1 group relative">
+              صفحه اصلی
+            </Link>
             <li className="nav-link flex items-center gap-1 group relative">
               انواع پک های پذیرایی ما
             </li>

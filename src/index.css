@@ -77,26 +77,7 @@
         @apply cursor-pointer transition-all duration-200;
     }
     .btn {
-        @apply rounded-xl text-light p-3 font-bold transition-all duration-200;
+        @apply rounded-xl text-light p-3 font-bold transition-all duration-200 hover:bg-secondary;
     }
-    .clip-path {
-        clip-path: polygon(
-            38% 21%,
-            44% 27%,
-            45% 35%,
-            48% 44%,
-            55% 48%,
-            66% 49%,
-            74% 55%,
-            72% 67%,
-            60% 76%,
-            44% 74%,
-            33% 71%,
-            26% 57%,
-            24% 46%,
-            23% 31%,
-            28% 27%,
-            30% 24%
-        );
-    }
+ 
 }

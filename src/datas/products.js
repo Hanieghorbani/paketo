@@ -5,6 +5,11 @@ const products = [
     price: "70",
   },
   {
+    img: "1666615256635687d84dd8e.png",
+    title: "پک پذیرایی ترحیم 5",
+    price: "55",
+  },
+  {
     img: "170947726465e48d903cb4d.png",
     title: "پک پذیرایی جشن 2",
     price: "54",
@@ -13,11 +18,6 @@ const products = [
     img: "170947783365e48fc918c2f.png",
     title: "پک پذیرایی جشن 3",
     price: "91",
-  },
-  {
-    img: "1666615256635687d84dd8e.png",
-    title: "پک پذیرایی ترحیم 5",
-    price: "55",
   },
   {
     img: "166661597663568aa82613a.png",
