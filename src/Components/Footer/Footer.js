@@ -1,6 +1,7 @@
 import React from "react"
 import { BsEnvelopeAt } from "react-icons/bs"
 import { FaPhone } from "react-icons/fa"
+
 export default function Footer() {
   return (
     <div>

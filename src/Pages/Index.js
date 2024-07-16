@@ -3,19 +3,18 @@ import Header from "../Components/Header/Header"
 import Box from "../Components/Box/Box"
 import { Autoplay, Pagination } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
-import products from "../datas/products"
+import productsInfos from "../datas/products"
 import articles from "../datas/articles"
 import AdvertiseBox from "../Components/AdvertiseBox/AdvertiseBox"
 import Footer from "../Components/Footer/Footer"
 import "swiper/css"
 import { Link } from "react-router-dom"
+import { IoIosArrowRoundBack } from "react-icons/io"
 import { FaInfo } from "react-icons/fa6"
 import { IoSearchOutline } from "react-icons/io5"
 import { LiaCartPlusSolid } from "react-icons/lia"
-import { IoIosArrowRoundBack } from "react-icons/io"
-
+import Products from "../Components/ProductsSwiper/ProductsSwiper"
 function Index() {
-
   return (
     <div className="App">
       <Header />
@@ -58,7 +57,7 @@ function Index() {
             <div className="w-4 h-4 bg-secondary rounded-md"></div>
             نوع مراسم را انتخاب کن !
           </h1>
-          <div className="grid sm:grid-cols-1 lg:grid-cols-3 justify-between gap-5 sm:my-14 lg:my-12 group">
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-between gap-5 sm:my-14 lg:my-12 group">
             <Box
               title="مراسم ترحیم"
               icon="GiCandleFlame"
@@ -76,6 +75,12 @@ function Index() {
               icon="GiVideoConference"
               duration="1300"
               desc="بهترین پک پذیرایی همایش با کیفیت و قیمت مناسب"
+            />
+            <Box
+              title="صبحانه"
+              icon="MdFreeBreakfast"
+              duration="1300"
+              desc="پک صبحانه پکتو را در ابعاد و قیمت‌های گوناگون سفارش دهید."
             />
           </div>
         </div>
@@ -102,7 +107,7 @@ function Index() {
               شما می­توانید پس از انتخاب هر یک از انواع مراسم بالا، پک پذیرایی
               مورد نظر خود را انتخاب کنید و در آخر تعداد پک های پذیرایی مورد نظر
               خود را وارد نمایید. و یا اینکه برای سفارش تلفنی پک پذیرایی و اطلاع
-              از قیمت پک‌های پذیرایی، با شماره 02100012345 تماس بگیرید. از اینجا
+              از قیمت پک‌های پذیرایی، با شماره 02177300012 تماس بگیرید. از اینجا
               به بعد تنها منتظر تحویل پک پذیرایی سفارشی خود در آدرس و زمانی که
               تعیین کرده‌اید باشید. به همین راحتی پَکِتو تحویل بگیر!
             </p>
@@ -196,79 +201,7 @@ function Index() {
         {/*end Counseling */}
 
         {/*product paks  */}
-        <div className="mt-32  relative">
-          {/* <img src="./imgs/Untitled5.png" className=" absolute -left-[389px] -top-[254px]"></img> */}
-          <div className="flex justify-between items-center mb-10 px-10">
-            <h1 className="text-2xl text-zinc-800 font-bold flex gap-2 items-center">
-              <div className="w-4 h-4 bg-secondary rounded-md"></div>
-              پک های پذیرایی ما
-            </h1>
-            <button className="flex items-center gap-1 text-primary">
-              مشاهده تمام محصولات <IoIosArrowRoundBack className="text-2xl" />
-            </button>
-          </div>
-          <div className="bg-primary p-10">
-            <Swiper
-              breakpoints={{
-                300: { slidesPerView: 1 },
-                400: { slidesPerView: 2 },
-                768: { slidesPerView: 3 },
-                976: { slidesPerView: 4 },
-              }}
-              spaceBetween={30}
-              pagination={{
-                clickable: true,
-              }}
-              autoplay={{
-                delay: 2500,
-                disableOnInteraction: false,
-              }}
-              modules={[Pagination, Autoplay]}
-              className=" w-full "
-              loop={true}
-            >
-              {products.map((product) => (
-                <SwiperSlide>
-                  <div className="bg-primaryLight rounded-xl overflow-hidden shadow-md shadow-zinc-400/80 mb-10">
-              
-                    <img
-                      src={`./imgs/products/${product.img}`}
-                      alt="product"
-                      className="w-full h-56 bg-primaryLight cursor-pointer"
-                    />
-                    <div className="flex flex-col justify-between p-3 mt-3 space-y-3">
-                      <h5 className=" font-[faNum] text-zinc-800  flex justify-between">
-                        <p className="text-md cursor-pointer">
-                          {product.title}
-                        </p>
-                        <div className=" text-primary flex items-center gap-2">
-                          {product.price},000
-                          <p className=" relative">
-                            توما
-                            <span className=" absolute -top-[14px] left-[3px]">
-                              ن
-                            </span>
-                          </p>
-                        </div>
-                      </h5>
-                      <div className="flex justify-between items-center border-t border-primary pt-3">
-                        <Link to={`/product/${product.title}`} className="btn bg-primary text-sm">
-                          اطلاعات بیشتر
-                        </Link>
-                        <button
-                          className=" cursor-pointer text-secondary text-bold text-2xl"
-                          title="افزودن به سبد خرید"
-                        >
-                          <LiaCartPlusSolid />
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
-        </div>
+        <Products title={'پک های پذیرایی ما'}/>
         {/*end product paks  */}
 
         {/* Advertise */}
@@ -356,7 +289,7 @@ function Index() {
         </div>
         {/*end articles */}
 
-         <Footer />        
+        <Footer />
       </div>
       {/* <div className="w-full h-96">sdf</div> */}
       {/* end of body  */}

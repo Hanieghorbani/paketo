@@ -5,13 +5,14 @@ import { PiMagicWandThin } from "react-icons/pi"
 import { FaBirthdayCake } from "react-icons/fa"
 import { GiCandleFlame } from "react-icons/gi"
 import { GiVideoConference } from "react-icons/gi"
-
+import { MdFreeBreakfast } from "react-icons/md";
 export default function Box({ title, icon, duration, desc }) {
   const [isHovered, setIsHovered] = useState(false)
   const icons = {
     GiVideoConference: <GiVideoConference className="" />,
     GiCandleFlame: <GiCandleFlame className="" />,
     FaBirthdayCake: <FaBirthdayCake className="" />,
+    MdFreeBreakfast: <MdFreeBreakfast className="" />,
   }
   return (
     <div
