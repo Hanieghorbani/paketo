@@ -52,12 +52,12 @@ function Index() {
 
       <div className="">
         {/* type */}
-        <div className="mt-24 mx-10">
-          <h1 className="text-secondary text-center font-bold text-2xl flex gap-2 items-center justify-center">
-            <div className="w-4 h-4 bg-secondary rounded-md"></div>
+        <div className="mt-24 sm:mx-3 md:mx-10">
+          <h1 className="text-secondary text-center font-bold sm:text-xl smMd:text-2xl flex gap-2 items-center justify-center">
+            <div className="sm:w-2 md:w-4 sm:h-2 md:h-4 bg-secondary sm:rounded-sm md:rounded-md"></div>
             نوع مراسم را انتخاب کن !
           </h1>
-          <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-between gap-5 sm:my-14 lg:my-12 group">
+          <div className="grid sm:grid-cols-1 smMd:grid-cols-2 lg:grid-cols-4 justify-between gap-5 sm:my-14 lg:my-12 group">
             <Box
               title="مراسم ترحیم"
               icon="GiCandleFlame"
@@ -87,19 +87,19 @@ function Index() {
         {/* end type  */}
 
         {/* first info  */}
-        <div className="flex sm:flex-col lg:flex-row gap-2 items-center bg-minorTX my-36 justify-between px-10">
-          <div className="w-[40%] space-y-5 py-10">
+        <div className="flex sm:flex-col md:flex-row gap-2 items-center bg-minorTX my-36 justify-between sm:px-3 md:px-10">
+          <div className="md:w-[40%] space-y-5 py-10">
             <h1
-              className="text-2xl font-bold text-gray-800 flex items-center gap-2"
+              className="sm:text-xl smMd:text-2xl font-bold text-gray-800 flex items-center gap-2"
               data-aos="fade-left"
               data-aos-duration={500}
               data-aos-anchor-placement="top-center"
             >
-              <div className="w-4 h-4 bg-secondary rounded-md"></div>
+              <div className="sm:w-2 md:w-4 sm:h-2 md:h-4 bg-secondary sm:rounded-sm md:rounded-md"></div>
               سفارش پک آماده در <span className="text-secondary">پَکِتو</span>
             </h1>
             <p
-              className="border-r-2 border-secondary pr-3 leading-9 text-justify"
+              className="md:border-r-2 border-secondary md:pr-3 leading-9 text-justify"
               data-aos="fade-left"
               data-aos-duration={700}
               data-aos-anchor-placement="top-center"
@@ -118,50 +118,50 @@ function Index() {
               // data-aos-anchor-placement="top-center"
               // data-aos-delay="0"
             >
-              <button className="btn bg-primary flex gap-1 items-center">
+              <button className="btn sm:text-sm md:text-base bg-primary flex gap-1 items-center">
                 انتخاب پک <IoSearchOutline />
               </button>
-              <button className="btn bg-primary flex gap-2 items-center">
+              <button className="btn sm:text-sm md:text-base bg-primary flex gap-2 items-center">
                 اطلاعات بیشتر <FaInfo />
               </button>
             </div>
           </div>
-          <div className="relative w-[60%]">
+          <div className="relative md:w-[60%]">
             <img
               src="./imgs/Untitled.png"
               alt=""
-              className=" absolute w-[50rem] h-[43rem] -top-[181px] -left-[97px]"
+              className=" absolute w-[50rem] sm:h-[21rem] smMd:h-[28rem] md:h-[43rem] sm:-top-[82px] md:-top-[116px] lg:-top-[181px] sm:left-0 md:-left-[97px]"
             />
             <div
-              className="z-10 flex justify-center relative mr-[121px]"
+              className="z-10 flex md:flex-col lg:flex-row justify-center relative md:mr-[121px]"
               data-aos="fade-right"
               data-aos-duration={700}
               data-aos-anchor-placement="top-center"
             >
               <img
                 src="./imgs/پک-پذیرایی-مقوایی-مشکی-min.jpg"
-                className="w-44 rounded-lg ml-5"
+                className="sm:w-24 smMd:w-32 md:w-80 lg:w-44 md:h-44 lg:h-auto rounded-lg ml-2 md:ml-5 md:mb-5 lg:mb-0"
               />
-              <div className="grid grid-cols-2 gap-5">
+              <div className="grid grid-cols-2 sm:gap-2 md:gap-5">
                 <img
                   src="./imgs/سینی-حلوا-و-خرمای-مجلسی-scaled.jpg"
                   alt=""
-                  className="w-40 rounded-lg"
+                  className="sm:w-20 smMd:w-28 md:w-40 rounded-lg"
                 />
                 <img
                   src="./imgs/پک-ترحیم-میوه-scaled.jpg"
                   alt=""
-                  className="w-40 rounded-lg"
+                  className="sm:w-20 smMd:w-28 md:w-40 rounded-lg"
                 />
                 <img
                   src="./imgs/سینی-خرما-حلوا-مجلسی-300x300.jpg"
                   alt=""
-                  className="w-40 rounded-lg"
+                  className="sm:w-20 smMd:w-28 md:w-40 rounded-lg"
                 />
                 <img
                   src="./imgs/پک-بسته-بندی-پذیرایی.jpeg"
                   alt=""
-                  className="w-40 rounded-lg"
+                  className="sm:w-20 smMd:w-28 md:w-40 rounded-lg"
                 />
               </div>
             </div>
@@ -170,17 +170,17 @@ function Index() {
         {/* end first info  */}
 
         {/* Counseling */}
-        <div className="my-32 px-10 flex items-center justify-between">
+        <div className="my-32 sm:px-3 md:px-10 flex sm:flex-col smMd:flex-row items-center justify-between gap-5">
           <h1
-            className="text-2xl font-bold text-gray-800"
+            className="sm:text-xl md:text-2xl font-bold text-gray-800"
             data-aos="flip-right"
             data-aos-duration={700}
             data-aos-anchor-placement="top-center"
           >
-            برای راهنمایی سفارش پک، مشاوره رایگان دریافت کنید !
+            برای راهنمایی سفارش پک، مشاوره رایگان دریافت کنید.
           </h1>
           <div
-            className="flex flex-col gap-3 w-[45%]"
+            className="flex flex-col gap-3 sm:w-full md:w-[45%]"
             data-aos="flip-left"
             data-aos-duration={700}
             data-aos-anchor-placement="top-center"
@@ -195,7 +195,7 @@ function Index() {
               className="bg-minorTX rounded-xl p-3 placeholder:text-secondary"
               placeholder="تلفن شما"
             />
-            <button className="btn bg-primary">رزرو مشاوره</button>
+            <button className="btn sm:text-sm md:text-base bg-primary">رزرو مشاوره</button>
           </div>
         </div>
         {/*end Counseling */}
@@ -205,7 +205,7 @@ function Index() {
         {/*end product paks  */}
 
         {/* Advertise */}
-        <div className=" relative mb-32 px-10 py-20 bg-img-halva">
+        <div className=" relative mb-32 sm:px-3 md:px-10  py-20 bg-img-halva bg-cover bg-no-repeat">
           <div className=" absolute top-0 left-0 w-full h-full bg-zinc-800/80"></div>
           <div className="flex sm:flex-col lg:flex-row justify-between gap-10 fap-5 z-10 relative">
             <AdvertiseBox
@@ -233,15 +233,15 @@ function Index() {
         {/*end Advertise */}
 
         {/* articles */}
-        <div className="my-32 px-10 relative">
+        <div className="my-32 sm:px-3 md:px-10 relative">
           <img
             src="./imgs/Untitled2.png"
-            className=" absolute -right-[400px] -top-[206px]"
+            className="sm:hidden md:flex absolute -right-[400px] -top-[206px]"
           ></img>
-          <div className="my-32 px-10">
+          <div className="my-32 sm:px-3 md:px-10">
             <div className="flex justify-between items-center mb-10 z-10">
-              <h1 className="text-2xl text-light relative font-bold flex gap-2 items-center">
-                <div className="w-4 h-4 bg-secondary rounded-md"></div>
+              <h1 className="text-2xl sm:text-zinc-800 md:text-light relative font-bold flex gap-2 items-center">
+                <div className="sm:w-2 md:w-4 sm:h-2 md:h-4 bg-secondary sm:rounded-sm md:rounded-md"></div>
                 آخرین مطالب
               </h1>
               <button className="flex items-center gap-1 text-primary">

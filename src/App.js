@@ -9,7 +9,7 @@ function App() {
   useEffect(() => {
     AOS.init({})
   }, [])
-  return <div className="App">{router}</div>
+  return <div className="App overflow-x-hidden">{router}</div>
 }
 
 export default App

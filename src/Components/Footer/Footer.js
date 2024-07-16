@@ -5,7 +5,7 @@ import { FaPhone } from "react-icons/fa"
 export default function Footer() {
   return (
     <div>
-      <div className="px-10 py-10 bg-primary z-10 relative grid sm:grid-cols-1 lg:grid-cols-2 gap-10">
+      <div className="sm:px-3 md:px-10 py-10 bg-primary z-10 relative grid sm:grid-cols-1 lg:grid-cols-2 gap-10">
         <div className=" space-y-5">
           <img src="/imgs/logo.png" alt="logo" />
           <p className=" leading-8 text-primaryLight">
@@ -28,9 +28,9 @@ export default function Footer() {
             </p>
           </div>
           <div className="flex gap-5 items-center">
-            <img src="./imgs/logo-anjoman.cf66575.png" alt="" />
-            <img src="./imgs/logo-ecunion.7f2795e.png" alt="" />
-            <img src="./imgs/enamad.png" alt="" />
+            <img src="/imgs/logo-anjoman.cf66575.png" alt="anjoman" />
+            <img src="/imgs/logo-ecunion.7f2795e.png" alt="ecunion" />
+            <img src="/imgs/enamad.png" alt="enamad" />
           </div>
         </div>
         <div>

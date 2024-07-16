@@ -6,20 +6,20 @@ import { Link } from "react-router-dom"
 import { IoIosArrowRoundBack } from "react-icons/io"
 import { LiaCartPlusSolid } from "react-icons/lia"
 
-export default function Products({title,bg}) {
+export default function Products({ title, bg }) {
   return (
     <div className="mt-32  relative">
       {/* <img src="./imgs/Untitled5.png" className=" absolute -left-[389px] -top-[254px]"></img> */}
-      <div className="flex justify-between items-center mb-10 px-10">
-        <h1 className="text-2xl text-zinc-800 font-bold flex gap-2 items-center">
-          <div className="w-4 h-4 bg-secondary rounded-md"></div>
+      <div className="flex  sm:gap-4 justify-between items-center sm:mb-5 md:mb-10 sm:px-3 md:px-10">
+        <h1 className="text-xl md:text-2xl text-zinc-800 font-bold flex  sm:gap-1 md:gap-2 items-center">
+          <div className="sm:w-2 md:w-4 sm:h-2 md:h-4 bg-secondary sm:rounded-sm md:rounded-md"></div>
           {title}
         </h1>
         <button className="flex items-center gap-1 text-primary">
           مشاهده تمام محصولات <IoIosArrowRoundBack className="text-2xl" />
         </button>
       </div>
-      <div className={`${bg ? bg : 'bg-primary'} p-10`}>
+      <div className={`${bg ? bg : "bg-primary"} p-3 md:p-10`}>
         <Swiper
           breakpoints={{
             300: { slidesPerView: 1 },
