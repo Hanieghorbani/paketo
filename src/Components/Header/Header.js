@@ -1,14 +1,16 @@
-import React, { useState } from "react"
 import useScroll from "../../hooks/useScroll"
-import { Link } from "react-router-dom"
 import Sidebar from "../Sidebar/Sidebar"
+
+import React, { useState } from "react"
+import { Link } from "react-router-dom"
+import { Dialog } from "@headlessui/react"
+
 // icons
 import { LuUser2 } from "react-icons/lu"
 import { HiOutlineBars3BottomLeft } from "react-icons/hi2"
-import { Dialog } from "@headlessui/react"
-
-// import axios from "axios"
+import { FiShoppingCart } from "react-icons/fi"
 // icons
+
 export default function Header({ is }) {
   const [isFixed, offset] = useScroll(67)
   const [isOpenSideMenu, setIsOpenSideMenu] = useState(false)
