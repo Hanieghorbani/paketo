@@ -1,18 +1,17 @@
-import React, { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
-import products from "../datas/products"
-import Header from "../Components/Header/Header"
-import { Link } from "react-router-dom"
-import Footer from "../Components/Footer/Footer"
 import ProductsSwiper from "../Components/ProductsSwiper/ProductsSwiper"
-import { LiaCartPlusSolid } from "react-icons/lia"
-import { GiScales } from "react-icons/gi"
-import { FaRegUserCircle, FaStar, FaRegStar } from "react-icons/fa"
-import { VscHeartFilled, VscHeart } from "react-icons/vsc"
-import { Formik, Form } from "formik"
+import Footer from "../Components/Footer/Footer"
+import Header from "../Components/Header/Header"
+import products from "../datas/products"
+
+import React, { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
+import { useParams } from "react-router-dom"
 import * as Yup from "yup"
-import { Field, ErrorMessage } from "formik"
-import { FaPhone } from "react-icons/fa"
+import { Formik, Form ,Field, ErrorMessage } from "formik"
+
+// icons 
+import { LiaCartPlusSolid } from "react-icons/lia"
+import { FaRegUserCircle, FaStar, FaRegStar,FaPhone } from "react-icons/fa"
 import { FaCircleMinus, FaCirclePlus } from "react-icons/fa6"
 
 export default function Product() {

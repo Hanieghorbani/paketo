@@ -58,25 +58,25 @@ function Index() {
             <Box
               title="مراسم ترحیم"
               icon="GiCandleFlame"
-              duration="500"
+              duration="100"
               desc="با پک پذیرایی ترحیم با خیال راحت از مهمانان و عزاداران پذیرایی کنید."
             />
             <Box
               title="تولد و مهمانی"
               icon="FaBirthdayCake"
-              duration="700"
+              duration="200"
               desc="پک پذیرایی همایش و جشن و هر دورهمی خود را از پکتو سفارش دهید."
             />
             <Box
               title="همایش"
               icon="GiVideoConference"
-              duration="1300"
+              duration="300"
               desc="بهترین پک پذیرایی همایش با کیفیت و قیمت مناسب"
             />
             <Box
               title="صبحانه"
               icon="MdFreeBreakfast"
-              duration="1300"
+              duration="400"
               desc="پک صبحانه پکتو را در ابعاد و قیمت‌های گوناگون سفارش دهید."
             />
           </div>
@@ -98,7 +98,7 @@ function Index() {
             <p
               className="md:border-r-2 border-secondary md:pr-3 leading-9 text-justify"
               data-aos="fade-left"
-              data-aos-duration={700}
+              data-aos-duration={300}
               data-aos-anchor-placement="top-center"
             >
               شما می­توانید پس از انتخاب هر یک از انواع مراسم بالا، پک پذیرایی
@@ -132,7 +132,7 @@ function Index() {
             <div
               className="z-10 flex md:flex-col lg:flex-row justify-center relative md:mr-[121px]"
               data-aos="fade-right"
-              data-aos-duration={700}
+              data-aos-duration={300}
               data-aos-anchor-placement="top-center"
             >
               <img
