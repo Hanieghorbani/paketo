@@ -204,7 +204,8 @@ function Index() {
         {/*end product paks  */}
 
         {/* our customers */}
-        <div className="sm:mx-3 md:mx-10 bg-minorTX my-10 rounded-xl sm:p-3 md:p-5">
+        <div className="sm:mx-3 md:mx-10 bg-minorTX mt-10 mb-20 rounded-xl sm:p-3 md:p-5 relative">
+        <div className=" absolute -bottom-[65px] left-0 right-0 w-full bg-minorTX rounded-[39%] h-full -z-10"></div>
           <div className="flex justify-between sm:flex-col smMd2:flex-row sm:gap-5 md:gap-0">
             <div className=" space-y-5 md:w-1/2">
               <h2 className="sm:text-xl md:text-2xl text-zinc-800 flex items-center gap-2 font-bold">
