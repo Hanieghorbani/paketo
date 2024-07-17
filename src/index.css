@@ -79,5 +79,8 @@
     .btn {
         @apply rounded-xl text-light p-3 font-bold transition-all duration-200 hover:bg-secondary;
     }
+    .customers-section img{
+        @apply sm:h-12 md:h-16 sm:w-12 md:w-16 rounded-xl;
+    }
  
 }

@@ -1,7 +1,7 @@
 import CoverEndOfHeader from "../Components/CoverEndOfHeader/CoverEndOfHeader"
 import Header from "../Components/Header/Header"
 import Box from "../Components/Box/Box"
-import { Autoplay, Pagination } from "swiper/modules"
+import { Autoplay, Pagination, Navigation } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
 import articles from "../datas/articles"
 import AdvertiseBox from "../Components/AdvertiseBox/AdvertiseBox"
@@ -192,14 +192,174 @@ function Index() {
               className="bg-minorTX rounded-xl p-3 placeholder:text-secondary"
               placeholder="تلفن شما"
             />
-            <button className="btn sm:text-sm md:text-base bg-primary">رزرو مشاوره</button>
+            <button className="btn sm:text-sm md:text-base bg-primary">
+              رزرو مشاوره
+            </button>
           </div>
         </div>
         {/*end Counseling */}
 
         {/*product paks  */}
-        <Products title={'پک های پذیرایی ما'}/>
+        <Products title={"پک های پذیرایی ما"} />
         {/*end product paks  */}
+
+        {/* our customers */}
+        <div className="sm:mx-3 md:mx-10 bg-minorTX my-10 rounded-xl sm:p-3 md:p-5">
+          <div className="flex justify-between sm:flex-col smMd2:flex-row sm:gap-5 md:gap-0">
+            <div className=" space-y-5 md:w-1/2">
+              <h2 className="sm:text-xl md:text-2xl text-zinc-800 flex items-center gap-2 font-bold">
+                <div className="sm:w-2 md:w-4 sm:h-2 md:h-4 bg-secondary sm:rounded-sm md:rounded-md"></div>
+                همراهان پَکِتو
+              </h2>
+              <p className=" leading-8 text-justify">
+                مشتریان پکتو بیش از 100 کمپانی خصوصی و ارگان های دولتی معروف را
+                شامل می شوند. این کمپانی ها و ارگان ها، به عنوان بهترین و مشهور
+                ترین شرکت های ایران شناخته می شوند وافتخار پذیرایی در همایش ها،
+                جلسات کاری را به عهده شرکت ما قرار داده اند.
+                <br />
+                <br />
+                همچنین، بسیاری از همشهریان نیز برای جلسات دفاع، تولد ، مهمانی و
+                مراسم ترحیم، برای پذیرایی از مهمان های خود پکتو را انتخاب کرده
+                اند.
+              </p>
+            </div>
+            <img
+              src="/imgs/3-510x510.jpg"
+              alt=""
+              className="rounded-lg sm:h-[18rem] md:h-[20rem] md:w-[20rem] lg:h-[25rem] lg:w-[25rem] lgXl:w-[30rem]"
+            />
+          </div>
+          <div className=" space-y-3 customers-section overflow-hidden mt-10">
+            <div className="bg-white rounded-lg sm:py-1 md:py-3" dir="ltr">
+              <Swiper
+                className="py-0 mySwiper"
+                breakpoints={{
+                  350: { slidesPerView: 4 },
+                  768: { slidesPerView: 6 },
+                  992: { slidesPerView: 8 },
+                }}
+                freeMode={true}
+                speed={1200}
+                centeredSlides={true}
+                spaceBetween={5}
+                pagination={{
+                  clickable: true,
+                }}
+                autoplay={{
+                  delay: 0,
+                  disableOnInteraction: false,
+                }}
+                navigation={true}
+                loop={true}
+                modules={[Navigation, Autoplay, Pagination]}
+              >
+                <SwiperSlide>
+                  <img src="./imgs/customers/1.jpg" alt="" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="./imgs/customers/2.jpg" alt="" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="./imgs/customers/3.jpg" alt="" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="./imgs/customers/4.jpg" alt="" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="./imgs/customers/5.png" alt="" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="./imgs/customers/6.jpg" alt="" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="./imgs/customers/7.png" alt="" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="./imgs/customers/8.png" alt="" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="./imgs/customers/9.png" alt="" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="./imgs/customers/10.png" alt="" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="./imgs/customers/11.jpg" alt="" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="./imgs/customers/12.jpeg" alt="" />
+                </SwiperSlide>
+              </Swiper>
+            </div>
+            <div className="bg-white rounded-lg sm:py-1 md:py-3">
+              <Swiper
+                className="py-0 mySwiper"
+                breakpoints={{
+                  350: { slidesPerView: 4 },
+                  768: { slidesPerView: 6 },
+                  992: { slidesPerView: 8 },
+                }}
+                freeMode={true}
+                speed={1200}
+                centeredSlides={true}
+                spaceBetween={5}
+                pagination={{
+                  clickable: true,
+                }}
+                autoplay={{
+                  enabled: true,
+                  delay: 0,
+                  pauseOnMouseEnter: false,
+                  disableOnInteraction: false,
+                }}
+                navigation={true}
+                modules={[Navigation, Autoplay, Pagination]}
+                loop={true}
+              >
+                <SwiperSlide>
+                  <img src="./imgs/customers/10.png" alt="" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="./imgs/customers/13.png" alt="" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="./imgs/customers/14.png" alt="" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="./imgs/customers/15.jpg" alt="" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="./imgs/customers/16.jpg" alt="" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="./imgs/customers/18.png" alt="" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="./imgs/customers/17.png" alt="" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="./imgs/customers/19.png" alt="" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="./imgs/customers/20.jpg" alt="" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="./imgs/customers/21.png" alt="" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="./imgs/customers/22.png" alt="" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="./imgs/customers/23.png" alt="" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="./imgs/customers/24.png" alt="" />
+                </SwiperSlide>
+              </Swiper>
+            </div>
+          </div>
+        </div>
+        {/*end our customers */}
 
         {/* Advertise */}
         <div className=" relative mb-32 sm:px-3 md:px-10  py-20 bg-img-halva bg-cover bg-no-repeat">
