@@ -1,8 +1,10 @@
 import Index from "./Pages/Index"
 import Proudct from "./Pages/Product"
+import Login from "./Pages/Login"
 const routes = [
   { path: "/", element: <Index /> },
   { path: "/product/:title", element: <Proudct /> },
+  { path: "/login", element: <Login /> },
 ]
 
 export default routes

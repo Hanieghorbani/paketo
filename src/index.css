@@ -73,7 +73,7 @@
 
 @layer utilities {
     .nav-link{
-        @apply cursor-pointer transition-all duration-200 hover:text-minorTX duration-300 transition-all py-3;
+        @apply cursor-pointer transition-all duration-200 hover:text-minorTX duration-300 transition-all pt-2 pb-[1rem];
     }
     .btn {
         @apply rounded-xl text-light p-3 font-bold transition-all duration-200 hover:bg-secondary;
@@ -88,5 +88,11 @@
     .subMenu-link:first-child,
     .subMenu-link:last-child {
         @apply rounded-xl;
+    }
+    .form-content{
+        @apply bg-primaryLight rounded-xl p-3 placeholder:text-secondary w-full;
+    }
+    .form-error{
+
     }
 }

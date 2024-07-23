@@ -19,7 +19,7 @@ export default function Header({ is }) {
   return (
     <>
       <div
-        className={`flex justify-between items-center container-primary py-2  sm:px-3 md:px-10 lg:z-[600] sm:z-50 w-full  transition-all duration-200
+        className={`flex justify-between items-center container-primary pt-2  sm:px-3 md:px-10 lg:z-[600] sm:z-50 w-full  transition-all duration-200
       ${
         offset == 0 && !is
           ? " bg-inherit fixed top-0 text-primaryLight"
@@ -36,7 +36,7 @@ export default function Header({ is }) {
             <img
               src="/imgs/logo.png"
               alt="logo"
-              className="sm:w-16 md:w-24 cursor-pointer"
+              className="sm:w-16 md:w-24 cursor-pointer py-2"
             />
           </Link>
           <ul className="gap-5 -mb-2 mr-3 sm:hidden md:flex">
@@ -56,7 +56,7 @@ export default function Header({ is }) {
                 <IoIosArrowDown className=" text-primaryLight text-lg"/>
               </span>
               {isShowSubMenu && (
-                <ul className="text-sm absolute top-[2.8rem] bg-zinc-900/80 backdrop-blur-md shadow-lg rounded-2xl w-52 p-2">
+                <ul className="text-sm absolute top-[3rem] bg-zinc-900/70 backdrop-blur-md shadow-lg rounded-2xl w-52 p-2">
                   <li className="w-full block subMenu-link">پک ترحیم</li>
                   <li className="w-full block subMenu-link">
                     پک تولد و مهمانی
@@ -82,10 +82,10 @@ export default function Header({ is }) {
               3
             </span>
           </button>
-          <button className="btn bg-primary text-[0.9rem] sm:hidden  smMd:flex items-center gap-2">
+          <Link to={'/login'} className="btn bg-primary text-[0.9rem] sm:hidden  smMd:flex items-center gap-2">
             <LuUser2 className="text-xl" />
             <span>ورود / عضویت</span>
-          </button>
+          </Link>
           <button
             className="btn bg-primary sm:flex md:hidden text-xl text-primaryLight"
             onClick={() => setIsOpenSideMenu(true)}
