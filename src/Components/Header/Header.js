@@ -9,11 +9,13 @@ import { Dialog } from "@headlessui/react"
 import { LuUser2 } from "react-icons/lu"
 import { HiOutlineBars3BottomLeft } from "react-icons/hi2"
 import { FiShoppingCart } from "react-icons/fi"
+import { IoIosArrowDown } from "react-icons/io"
 // icons
 
 export default function Header({ is }) {
   const [isFixed, offset] = useScroll(67)
   const [isOpenSideMenu, setIsOpenSideMenu] = useState(false)
+  const [isShowSubMenu, setIsShowSubMenu] = useState(false)
   return (
     <>
       <div
@@ -38,11 +40,31 @@ export default function Header({ is }) {
             />
           </Link>
           <ul className="gap-5 -mb-2 mr-3 sm:hidden md:flex">
-            <Link to={'/'} className="nav-link flex items-center gap-1 group relative">
+            <Link
+              to={"/"}
+              className="nav-link flex items-center gap-1 group relative"
+            >
               صفحه اصلی
             </Link>
-            <li className="nav-link flex items-center gap-1 group relative">
-              انواع پک های پذیرایی ما
+            <li
+              className="nav-link flex items-center gap-1 group relative"
+              onMouseEnter={() => setIsShowSubMenu(true)}
+              onMouseLeave={() => setIsShowSubMenu(false)}
+            >
+              <span className="flex items-center gap-1">
+                انواع پک های پذیرایی ما
+                <IoIosArrowDown className=" text-primaryLight text-lg"/>
+              </span>
+              {isShowSubMenu && (
+                <ul className="text-sm absolute top-[2.8rem] bg-zinc-900/80 backdrop-blur-md shadow-lg rounded-2xl w-52 p-2">
+                  <li className="w-full block subMenu-link">پک ترحیم</li>
+                  <li className="w-full block subMenu-link">
+                    پک تولد و مهمانی
+                  </li>
+                  <li className="w-full block subMenu-link">پک همایش</li>
+                  <li className="w-full block subMenu-link">پک صبحانه</li>
+                </ul>
+              )}
             </li>
             <li className="nav-link flex items-center gap-1 group relative">
               مقاله ها
@@ -78,12 +100,12 @@ export default function Header({ is }) {
           <div className="px-4 sm:px-6 py-5 bg-zinc-800/70">
             <Dialog.Title className="text-2xl flex justify-between items-center">
               منو
-                <button className="btn bg-primary relative sm:flex smMd:hidden text-4xl">
-                  <FiShoppingCart className="text-xl" />
-                  <span className=" absolute -top-[4px] left-[3px] text-sm font-[faNum]">
-                    3
-                  </span>
-                </button>
+              <button className="btn bg-primary relative sm:flex smMd:hidden text-4xl">
+                <FiShoppingCart className="text-xl" />
+                <span className=" absolute -top-[4px] left-[3px] text-sm font-[faNum]">
+                  3
+                </span>
+              </button>
             </Dialog.Title>
           </div>
 

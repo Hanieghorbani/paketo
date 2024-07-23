@@ -72,9 +72,8 @@
 }
 
 @layer utilities {
-    .nav-link,
-    .nav-link svg {
-        @apply cursor-pointer transition-all duration-200 hover:text-minorTX duration-300 transition-all;
+    .nav-link{
+        @apply cursor-pointer transition-all duration-200 hover:text-minorTX duration-300 transition-all py-3;
     }
     .btn {
         @apply rounded-xl text-light p-3 font-bold transition-all duration-200 hover:bg-secondary;
@@ -82,5 +81,12 @@
     .customers-section img{
         @apply sm:h-12 md:h-16 sm:w-12 md:w-16 rounded-xl;
     }
- 
+    .subMenu-link {
+        @apply hover:bg-black/40 p-3 transition-all cursor-pointer;
+    }
+
+    .subMenu-link:first-child,
+    .subMenu-link:last-child {
+        @apply rounded-xl;
+    }
 }
