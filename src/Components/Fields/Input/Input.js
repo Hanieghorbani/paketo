@@ -33,7 +33,7 @@ export default function Input({
         name={id}
         placeholder={placeholder}
       />
-      <ErrorMessage name={id} component="div" className="error form-error text-red-600 text-sm" />
+      <ErrorMessage name={id} component="div" className="error form-error text-red-600 text-[12px]" />
       {pass && (
         <div>
           {isVisible ? (
