@@ -7,11 +7,11 @@ import React, { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import { useParams } from "react-router-dom"
 import * as Yup from "yup"
-import { Formik, Form ,Field, ErrorMessage } from "formik"
+import { Formik, Form, Field, ErrorMessage } from "formik"
 
-// icons 
+// icons
 import { LiaCartPlusSolid } from "react-icons/lia"
-import { FaRegUserCircle, FaStar, FaRegStar,FaPhone } from "react-icons/fa"
+import { FaRegUserCircle, FaStar, FaRegStar, FaPhone } from "react-icons/fa"
 import { FaCircleMinus, FaCirclePlus } from "react-icons/fa6"
 
 export default function Product() {
@@ -64,6 +64,7 @@ export default function Product() {
       <div className="bg-primary rounded-[3rem] mt-32 sm:mx-3 md:mx-10 text-primaryLight sm:px-3 md:px-5 py-3">
         <Link to="/">خانه</Link> / محصول / {title}
       </div>
+
       <div className=" bg-minorTX rounded-[2rem] grid sm:grid-cols-1 lg:grid-cols-2 sm:m-3 md:m-10 relative overflow-hidden p-5">
         <img
           src="/imgs/Untitled.png"

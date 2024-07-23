@@ -66,9 +66,9 @@ export default function Header({ is }) {
                 </ul>
               )}
             </li>
-            <li className="nav-link flex items-center gap-1 group relative">
+            <Link to={'/blogs'} className="nav-link flex items-center gap-1 group relative">
               مقاله ها
-            </li>
+            </Link>
             <li className="nav-link flex items-center gap-1 group relative">
               تماس با ما
             </li>

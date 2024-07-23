@@ -38,8 +38,8 @@ export default function Login() {
           initialValues={initialValues}
           validationSchema={validationSchema}
         >
-          <Form className=" bg-minorTX backdrop-blur-lg text-zinc-800 space-y-7 md:w-2/3 lg:w-[40%] sm:p-5 sm:pt-0 lg:p-10 lg:pt-0 rounded-2xl z-10 shadow-lg">
-            <h1 className="sm:text-lg md:text-2xl text-center bg-primary lg:py-3 rounded-b-2xl w-1/3 mx-auto text-primaryLight">
+          <Form className=" bg-minorTX backdrop-blur-lg text-zinc-700 space-y-7 md:w-2/3 lg:w-[40%] sm:p-5 sm:pt-0 lg:p-10 lg:pt-0 rounded-2xl z-10 shadow-lg">
+            <h1 className="sm:text-lg md:text-2xl text-center bg-primary lg:py-3 rounded-b-2xl sm:w-[35%] lg:w-1/3 mx-auto text-primaryLight">
               ورود
             </h1>
             <div className="text-center">

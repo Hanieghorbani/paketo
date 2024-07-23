@@ -11,6 +11,7 @@ import { IoIosArrowRoundBack } from "react-icons/io"
 import { FaInfo } from "react-icons/fa6"
 import { IoSearchOutline } from "react-icons/io5"
 import Products from "../Components/ProductsSwiper/ProductsSwiper"
+import ArticleBox from "../Components/ArticleBox/ArticleBox"
 function Index() {
   return (
     <div className="App">
@@ -205,7 +206,7 @@ function Index() {
 
         {/* our customers */}
         <div className="sm:mx-3 md:mx-10 bg-minorTX mt-10 mb-20 rounded-xl sm:p-3 md:p-5 relative">
-        <div className=" absolute sm:-bottom-[36px] md:-bottom-[65px] left-0 right-0 w-full bg-minorTX sm:rounded-[25%] md:rounded-[39%] h-full -z-10"></div>
+          <div className=" absolute sm:-bottom-[36px] md:-bottom-[65px] left-0 right-0 w-full bg-minorTX sm:rounded-[25%] md:rounded-[39%] h-full -z-10"></div>
           <div className="flex justify-between sm:flex-col smMd2:flex-row sm:gap-5 md:gap-0">
             <div className=" space-y-5 md:w-1/2">
               <h2 className="sm:text-xl md:text-2xl text-zinc-800 flex items-center gap-2 font-bold">
@@ -427,19 +428,12 @@ function Index() {
             >
               {articles.map((article) => (
                 <SwiperSlide>
-                  <div className=" bg-minorTX  rounded-xl overflow-hidden">
-                    <img
-                      src={article.img}
-                      alt="article"
-                      className="w-full h-56 rounded-b-lg cursor-pointer"
-                    />
-                    <div className="flex flex-col justify-between p-3 mt-3 space-y-3">
-                      <h5 className="text-lg font-[faNum] text-zinc-800 cursor-pointer">
-                        {article.title}
-                      </h5>
-                      <p className=" leading-7 text-sm">{article.desc}</p>
-                    </div>
-                  </div>
+                  <ArticleBox
+                    img={article.img}
+                    title={article.title}
+                    desc={article.desc}
+                  />
+                 
                 </SwiperSlide>
               ))}
             </Swiper>
